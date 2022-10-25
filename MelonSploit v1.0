@@ -1,48 +1,21 @@
+--BACKGROUND
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("MelonSploit v.1.0", "Ocean")
-    -- MAIN
-    local Main = Window:NewTab("Main")
-    local MainSection = Main:NewSection("Main")
+local Window = Library.CreateLib("MelonSploit", "Ocean")
+--MAIN
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main")
 
+--BUTTONS
+Section:NewButton("VR / Admin [semicolon vr ] ", "infinite yeild vr script", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+end)
 
-    MainSection:NewButton("VR (No Headset)", "Infinite Yield's Built In VR without a headset!", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+Section:NewButton("Fates Admin", "super lit admin script yessirrr", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
 
-
-
-    MainSection:NewButton("CMDX", "CMD - X Admin Commands", function()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
-    end)
-
-
-    --PLAYER
-    local Player = Window:NewTab("Player")
-    local PlayerSection = Player:NewSection("Player")
-
-    PlayerSection:NewSlider("Walkspeed", "SPEED ", 500, 16, function(s)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-    end)
-
-    PlayerSection:NewSlider("Jumppower", "JUMP-POWER", 350, 50, function(s)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-    end)
-
-    PlayerSection:NewButton("Reset Speed & JumpPower", "Resets to all defaults", function()
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end)
-
-
-    --Misc
-    local Other = Window:NewTab("Misc")
-    local OtherSection = Other:NewSection("Misc")
-
-    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
-    end)
-
-    OtherSection:NewButton("Bypassed Fly", "bird mode", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
-
-        Fly(true)
-    end)
+--EXTRA BUTTONS
+Section:NewButton("FlyGUI", "You can also use the keyboard bind E! allows you to fly using a cool gui!", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/W5aQUui6'))()
+end)
