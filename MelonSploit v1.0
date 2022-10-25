@@ -7,8 +7,7 @@ local Section = Tab:NewSection("Main")
 
 --BUTTONS
 Section:NewButton("VR / Admin [semicolon vr ] ", "infinite yeild vr script", function()
-    print("Clicked")
-loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 Section:NewButton("Fates Admin", "super lit admin script yessirrr", function()
